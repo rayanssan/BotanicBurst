@@ -10,7 +10,7 @@ then while in the the `BotanicBurst/server` directory<br>
 run on the terminal: `node server.js`,<br>
 then on a browser access the link: `localhost:3100`
 
-<strong>Made by:</strong><br>
+<strong>Developed by:</strong><br>
 Rayan S. Santana<br> 
 Helena Duarte<br>
 Marta Maia
