@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='./styles/stylesheet.css'>
+        <link rel="stylesheet" href="./styles/gamestyle.css">
+        <link rel="stylesheet" href="./styles/mediaqueries.css">
+        <title>Botanic Burst | Multiplayer</title>
+        <link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+</head>
+
+<!-- Body of the multiplayer Botanic Burst website after login -->
+
+<body id="botanicBurstMultiplayerPage">
+
+        <div id="menu-button"><label for="collapse"><img src="./media/icons/list.png" alt="A list icon"></label></div>
+        <nav id="menu" class="sidebar-menu">
+                <input type="checkbox" id="collapse">
+                <div id="slideshow-container">
+                        <button id="avatar-previous-button">&lt;</button>
+                        <a id="avatar-nav-player-a" class="avatar-slideshow">
+                                <img src="./media/icons/placeholder-image.png" alt="Your avatar">
+                                <span id="navUsernameA"></span>
+                        </a>
+                        <a id="avatar-nav-player-b" class="avatar-slideshow">
+                                <img src="./media/icons/placeholder-image.png" alt="Your avatar">
+                                <span id="navUsernameB"></span>
+                        </a>
+                        <button id="avatar-next-button">&gt;</button>
+                </div>
+                <a id="multiplayer-mode-nav"><img src="media/icons/two-flowers.png"
+                                alt="A sunflower and a daisy"><span>multiplayer game</span></a>
+                <a id="instructions-nav"><img src="media/icons/instructions-book.png"
+                                alt="A book plant"><span>instructions</span></a>
+                <a id="plants-dictionary-nav"><img src="media/icons/plants-dictionary.png"
+                                alt="A dictionary of plants"><span>plants dictionary</span></a>
+                <a id="about-us-nav"><img src="media/icons/hammer.png" alt="A hammer plant"><span>about us</span></a>
+                <a href='homepage.html'><img src="media/icons/log-out.png" alt="A log-out icon"><span>log out</span></a>
+                <p>themes:</p>
+                <div id="nav-theme-selection">
+                        <div class="theme-choice spring-theme"></div>
+                        <div class="theme-choice summer-theme"></div>
+                        <div class="theme-choice autumn-theme"></div>
+                        <div class="theme-choice winter-theme"></div>
+                        <div class="theme-choice darkmode-theme"></div>
+                </div>
+                <div id="nav-grid-size-selection-container">
+                        <p>grid sizes:<span id='reset-warning'>(changing resets game)</span></p>
+                        <div id="nav-grid-size-selection">
+                                <div class="grid-choice small-grid"></div>
+                                <div class="grid-choice normal-grid"></div>
+                                <div class="grid-choice large-grid"></div>
+                        </div>
+                </div>
+                <iframe id="soundcloud-iframe" allow="autoplay"></iframe>
+        </nav>
+
+        <!--All associated pages are shown through the iframe-->
+        <main>
+                <iframe id="botanicBurst" src="multiplayer.html"></iframe>
+        </main>
+
+        <script src="./scripts/themesScripts.js"></script>
+        <script src="./scripts/generalInfoUpdates.js"></script>
+        <script src="./scripts/gameStats.js"></script>
+        <script src="./scripts/navigation.js"></script>
+        <script src="./scripts/multiplayerSlideshow.js"></script>
+
+</body>
+
+</html>

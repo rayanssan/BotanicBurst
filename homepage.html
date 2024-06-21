@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/stylesheet.css">
+	<link rel="stylesheet" href="./styles/mediaqueries.css">
+	<title>Botanic Burst | Login</title>
+	<link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+</head>
+
+<!-- Body of the game website -->
+
+<body id="homepage">
+
+	<header>
+		<nav>
+			<div id="theme-choice-button"><label for="collapse-themes"><img src="./media/icons/seasons.png"
+						alt="A seasons icon"></label>
+				<p>themes</p>
+			</div>
+			<input type="checkbox" id="collapse-themes">
+			<div class="theme-selection-container">
+				<h2>themes</h2>
+				<p>prefer another aesthetic? we have 5 beautiful themes just for you!</p>
+				<div class="theme-boxes">
+					<div id="three-first-theme-boxes">
+						<div class="theme-choice spring-theme"><span>Spring</span></div>
+						<div class="theme-choice summer-theme"><span>Summer</span></div>
+						<div class="theme-choice autumn-theme"><span>Autumn</span></div>
+					</div>
+					<div id="two-last-theme-boxes">
+						<div class="theme-choice winter-theme"><span>Winter</span></div>
+						<div class="theme-choice darkmode-theme"><span>Dark Mode</span></div>
+					</div>
+				</div>
+			</div>
+			<a id="homepage-stats-link" href='homepageStats.html'><img src="./media/icons/trophy.png"
+					alt="A cute trophy that leads to the player's stats page!"></a>
+			<p>player stats</p>
+			<a id="homepage-instructions-link" href='homepageInstructions.html'><img
+					src="./media/icons/instructions-book.png"
+					alt="A book plant that leads to the instructions page!"></a>
+			<p>instructions</p>
+		</nav>
+	</header>
+
+	<main>
+		<h1>
+			<img id="titlePlantA" src="./media/plants/spring/sunflower.png" alt="One of two cute moving plants!">
+			Botanic Burst!
+			<img id="titlePlantB" src="./media/plants/spring/sunflower.png" alt="One of two cute moving plants!">
+		</h1>
+
+		<form id="login" action='botanicBurst.html' method="post">
+			<div class="form-group">
+				<input type='text' id='username-or-email' placeholder=" " required>
+				<label for="username-or-email">username or e-mail</label>
+			</div>
+			<div class="form-group">
+				<input type='password' id='password' placeholder=" " required>
+				<label for="password">password</label>
+			</div>
+			<div id="form-buttons">
+				<div id="bad-login-container"></div>
+
+				<button type='submit' id="play-game-button" class="button">PLAY</button>
+				<button type='button' id="multiplayer-login-button" class="button">multiplayer login</button>
+
+				<p>→ first time playing? <a href='register.html'>sign up</a></p>
+			</div>
+		</form>
+	</main>
+
+	<footer>
+		<p>
+			&#127800;
+			Developed by Rayan S. Santana, Helena Duarte, and Marta Maia
+			&#127800;
+			<br>
+			2023
+		</p>
+	</footer>
+
+	<script src="./scripts/themesScripts.js"></script>
+	<script src="./scripts/userLogin.js"></script>
+	<script src="./scripts/multiplayerLoginForm.js"></script>
+
+</body>
+
+</html>

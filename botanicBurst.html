@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='./styles/stylesheet.css'>
+        <link rel="stylesheet" href="./styles/gamestyle.css">
+        <link rel="stylesheet" href="./styles/mediaqueries.css">
+        <title>Botanic Burst</title>
+        <link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+</head>
+
+<!-- Body of the Botanic Burst website after login -->
+
+<body id="botanicBurstPage">
+
+        <div id="menu-button"><label for="collapse"><img src="./media/icons/list.png" alt="A list icon"></label></div>
+        <nav id="menu" class="sidebar-menu">
+                <input type="checkbox" id="collapse">
+                <a id="avatar-nav"><img src="./media/icons/placeholder-image.png" alt="Your avatar"><span
+                                id="navUsername"></span></a>
+                <a id="classic-mode-nav"><img src="media/plants/spring/sunflower.png"
+                                alt="A single sunflower"><span>classic game</span></a>
+                <a id="timed-mode-nav"><img src="media/icons/timer.png" alt="A clock flower"><span>timed game</span></a>
+                <a id="precision-mode-nav"><img src="media/plants/darkmode/angry-mushroom.png" alt="An angry mushroom"><span>precision game</span></a>
+                <a id="multiplayerAI-mode-nav"><img src="media/icons/flower-n-robot.png" alt="A flower and a robot"><span>multiplayer AI game</span></a>
+                <a id="stats-nav"><img src="media/icons/trophy.png" alt="A trophy"><span>stats</span></a>
+                <a id="instructions-nav"><img src="media/icons/instructions-book.png"
+                                alt="A book plant"><span>instructions</span></a>
+                <a id="plants-dictionary-nav"><img src="media/icons/plants-dictionary.png"
+                                alt="A dictionary of plants"><span>plants dictionary</span></a>
+                <a id="about-us-nav"><img src="media/icons/hammer.png" alt="A hammer plant"><span>about us</span></a>
+                <a href='homepage.html'><img src="media/icons/log-out.png" alt="A log-out icon"><span>log out</span></a>
+                <p>themes:</p>
+                <div id="nav-theme-selection">
+                        <div class="theme-choice spring-theme"></div>
+                        <div class="theme-choice summer-theme"></div>
+                        <div class="theme-choice autumn-theme"></div>
+                        <div class="theme-choice winter-theme"></div>
+                        <div class="theme-choice darkmode-theme"></div>
+                </div>
+                <div id="nav-grid-size-selection-container">
+                        <p>grid sizes:<span id='reset-warning'>(changing resets game)</span></p>
+                        <div id="nav-grid-size-selection">
+                                <div class="grid-choice small-grid"></div>
+                                <div class="grid-choice normal-grid"></div>
+                                <div class="grid-choice large-grid"></div>
+                        </div>
+                </div>
+                <iframe id="soundcloud-iframe" allow="autoplay"></iframe>
+        </nav>
+
+        <!--All associated pages are shown through the iframe-->
+        <main>
+                <iframe id="botanicBurst" src="game.html"></iframe>
+        </main>
+
+        <script src="./scripts/themesScripts.js"></script>
+        <script src="./scripts/generalInfoUpdates.js"></script>
+        <script src="./scripts/gameStats.js"></script>
+        <script src="./scripts/navigation.js"></script>
+
+</body>
+
+</html>
