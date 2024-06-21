@@ -1,0 +1,203 @@
+/* ------------------------------------------------------------------------------------------------------ */
+/* Styles for the instructions page
+/* ------------------------------------------------------------------------------------------------------ */
+
+#instructions-container {
+    height: max-content;
+    width: min-content;
+    display: grid;
+    grid-template-areas: "header-inst"
+    "goal"
+    "how-to-play"
+    "points"
+    "other-game-modes"
+    "curiosities"
+    "videos";
+    font-family: menlo, monospace;
+}
+
+#instructions-container h2:hover {
+    animation: bounce 1s ease-in;
+}
+
+#instructions-container h3 {
+    text-align: left;
+    padding: 15px 12px;
+    font-size: clamp(20px, 3vw, 25px);
+    margin: 0;
+}
+
+#instructions-container p {
+    text-align: left;
+    margin-left: 0;
+    padding: 0 2.5% 5px 2%;
+}
+
+#header-inst {
+    grid-area: header-inst;
+}
+
+#goal {
+    grid-area: goal;
+}
+
+#how-to-play {
+    grid-area: how-to-play;
+}
+
+#points {
+    grid-area: points;
+}
+
+#goal .small-div {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#goal .small-div img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#points img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(66, 58, 40);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#other-game-modes ul {
+    padding-left: 30px;
+}
+
+#multi-box {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#multi-box p {
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#multi-box img {
+    margin: auto;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 10px;
+    border: 2px solid rgb(66, 58, 40);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#timed-mode {
+    grid-area: timed-mode;
+}
+
+#curiosities {
+    grid-area: curiosities;
+}
+
+#curiosities a {
+    color: rgb(0, 168, 0);
+}
+
+#videos {
+    grid-area: videos;
+}
+
+iframe.youtube-video {
+    border-radius: 10px;
+    width: 45%;
+    height: 230px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#instructions-grids {
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-areas: "first-grid second-grid third-grid fourth-grid";
+}
+
+#instructions-grids-1st-pair,
+#instructions-grids-2nd-pair {
+    display: flex;
+}
+
+.game-board-inst-horz {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    background-color: var(--gameGridBackgroundColor);
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    margin-top: 23px;
+    margin-bottom: 20px;
+}
+
+.game-board-inst-vert {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
+    background-color: var(--gameGridBackgroundColor);
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+.easterEgg .game-board-inst-horz, .easterEgg .game-board-inst-vert {
+    background-image: linear-gradient(45deg, cyan, lavender, lightpink);
+}
+
+#first-grid {
+    grid-area: first-grid;
+}
+
+#second-grid {
+    grid-area: second-grid;
+}
+
+#third-grid {
+    grid-area: third-grid;
+}
+
+#fourth-grid {
+    grid-area: fourth-grid;
+}
+
+#instructions-container .cell {
+    width: 40px;
+    height: 40px;
+    cursor: auto;
+}
+
+.cell.move-up {
+    animation: move-up 3s infinite alternate;
+}
+
+.cell.move-down {
+    animation: move-down 3s infinite alternate;
+}
+
+.cell.move-left {
+    animation: move-left 3s infinite alternate;
+}
+
+.cell.move-right {
+    animation: move-right 3s infinite alternate;
+}

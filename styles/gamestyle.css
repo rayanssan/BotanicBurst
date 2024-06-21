@@ -1,0 +1,460 @@
+/* ------------------------------------------------------------------------------------------------------ */
+/* Styles for the game
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------
+/* General Game Styles */
+
+/* Game container styles */
+main.game {
+	width: auto;
+	max-width: none;
+	margin: auto 0 auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main.game:not(#multiplayerGameModePage main) {
+	align-items: center;
+}
+
+.game-container {
+	margin: auto;
+	width: fit-content;
+	padding: 10px;
+}
+
+/* Game grid styles */
+.game-grid {
+	width: fit-content;
+	margin: auto;
+	display: grid;
+	justify-items: center;
+	gap: 3px;
+	background-color: var(--gameGridBackgroundColor);
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	overflow: hidden;
+}
+
+.easterEgg .game-grid {
+	background-image: linear-gradient(45deg, cyan, lavender, lightpink);
+}
+
+/* Cells styles */
+.cell {
+	max-width: 65px;
+	max-height: 65px;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+	background-color: var(--gameCellBackgroundColor);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.cell.A {
+	background-image: var(--cellA);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.B {
+	background-image: var(--cellB);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.C {
+	background-image: var(--cellC);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.D {
+	background-image: var(--cellD);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.E {
+	background-image: var(--cellE);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.F {
+	background-image: var(--cellF);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.G {
+	background-image: var(--cellG);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.cell.H {
+	background-image: var(--cellH);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+/* Animations of cells */
+.cell:not(#instructions-container .cell):hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+/* Scoreboard styles */
+.scoreboard {
+	font-family: shake, monospace;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: clamp(15px, 5vw, 20px);
+	color: white;
+	background-color: var(--scoreboardBackgroundColor);
+	padding: 5px 17px 5px 17px;
+	border-radius: 10px;
+	border: 3px solid var(--borderColor);
+	max-width: 525px;
+	margin: 15px auto 15px auto;
+	filter: grayscale(1);
+}
+
+.score {
+	font-family: shake, monospace;
+	font-weight: bold;
+	font-size: clamp(15px, 5vw, 20px);
+}
+
+/* Play/Pause button styles */
+.play-pause-button {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.play-pause-button img {
+	width: 75%;
+	height: 75%;
+	object-fit: contain;
+}
+
+.play-pause-button img:hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+.play-pause-button img:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+#timedGameModePage .play-pause-button,
+#multiplayerGameModePage .play-pause-button {
+	align-items: center;
+}
+
+/* Time container styles */
+.time-elapsed-container {
+	font-family: shake, monospace;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: clamp(15px, 5vw, 20px);
+	color: black;
+	background-color: var(--timeElapsedContainerBackgroundColor);
+	border: 3px solid var(--borderColor);
+	padding: 5px 17px 5px 17px;
+	border-radius: 10px;
+	max-width: 525px;
+	width: 100%;
+	margin-bottom: 15px;
+	filter: grayscale(1);
+}
+
+#multiplayerGameModePage .time-elapsed-container,
+#timedGameModePage .time-elapsed-container {
+	margin-bottom: 0;
+}
+
+.time-elapsed {
+	font-family: shake, monospace;
+	font-weight: bold;
+	font-size: clamp(15px, 5vw, 20px);
+	font-variant-numeric: tabular-nums;
+}
+
+.timer-container {
+	font-family: shake, monospace;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	block-size: 55px;
+	max-width: 97%;
+	filter: grayscale(1);
+}
+
+main#instructions-container .timer-container {
+	filter: unset;
+}
+
+.timer-container img {
+	padding-right: 10px;
+	width: 35px;
+}
+
+progress {
+	width: 98%;
+	height: 50px;
+	accent-color: var(--accentColor);
+}
+
+/* Garden bar styles */
+.garden, .precisionConveyor {
+	font-family: shake, monospace;
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: start;
+	overflow-x: auto;
+	overflow-y: hidden;
+	font-size: 20px;
+	background-image: linear-gradient(-60deg, rgba(173, 216, 230), transparent);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	padding: 5px 17px 5px 17px;
+	border-radius: 10px;
+	border-bottom: 3px solid var(--borderColor);
+	width: 80vw;
+	max-width: 525px;
+	margin: 15px auto 15px auto;
+	filter: grayscale(1);
+}
+
+.precisionConveyor {
+	background-image: linear-gradient(-60deg, rgb(213, 93, 93), transparent);
+}
+
+.garden .cell, .precisionConveyor .cell {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.garden p, .precisionConveyor p {
+	font-family: shake, monospace;
+	font-size: clamp(4px, 4vw, 0.8em);
+}
+
+/* Game over styles */
+.garden-popup {
+	position: absolute;
+	background-color: var(--flowerpopup);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	border: 2px solid var(--timeElapsedContainerBackgroundColor);
+	border-radius: 10px;
+	padding: 20px;
+	z-index: 5;
+	max-height: 510px;
+	max-width: 570px;
+	margin: auto;
+	margin-top: -140px;
+	grid-area: main;
+	overflow-y: scroll;
+}
+
+.garden-popup div {
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	justify-content: start;
+	background-color: var(--flowerpopup);
+	padding-top: 5px;
+	border-radius: 15px;
+}
+
+.garden-popup .cell {
+	background-color: transparent;
+	box-shadow: none;
+	margin-bottom: 5px;
+}
+
+.garden-popup button {
+	position: absolute;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: var(--timeElapsedContainerBackgroundColor);
+	border-radius: 5px;
+	border: solid 2px black;
+	cursor: pointer;
+}
+
+.garden-popup h3 {
+	font-size: clamp(30px, 3vw, 55px);
+	font-family: ZipaDeeDooDah, monospace;
+	color: var(--h2Color);
+	text-align: center;
+	margin: auto;
+	font-weight: normal;
+	text-shadow: -1px -1px 1px var(--textShadowColor),
+		0px -1px 1px var(--textShadowColor),
+		1px -1px 1px var(--textShadowColor),
+		-1px 1px 1px var(--textShadowColor),
+		0px 1px 1px var(--textShadowColor),
+		1px 1px 1px var(--textShadowColor);
+}
+
+#popupTable {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 95%;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.garden-popup p {
+	font-family: menlo, monospace;
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 5px;
+}
+
+/* Upper and lower container styles */
+#upper-game-container-elements {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#lower-game-container-elements {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5px;
+}
+
+#lower-game-container-elements button {
+	width: 205px;
+	min-width: 180px;
+	margin: auto;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* Multiplayer game mode styles */
+
+#multiplayerGameModePage main.game {
+	padding: 15px;
+}
+
+/* Multiplayer grids styles */
+#multiplayer-grids {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#multiplayer-grids .game-container {
+	margin: 0;
+}
+
+#gameGridA {
+	background-color: var(--gameGridABackground);
+}
+
+.easterEgg #gameGridA {
+	background-image: linear-gradient(45deg, cyan, lavender, lightpink);
+}
+
+#gameGridB {
+	background-color: var(--gameGridBBackground);
+}
+
+.easterEgg #gameGridB {
+	background-image: linear-gradient(45deg, cyan, lightgoldenrodyellow, lightpink);
+}
+
+#multiplayer-grids .garden-popup {
+	margin-top: unset;
+}
+
+/* Multiplayer scoreboards styles */
+#multiplayer-scores {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#multiplayer-scores .scoreboard {
+	margin-top: 5px
+}
+
+#player-a-score.scoreboard {
+	background: var(--playerAScore);
+	color: black;
+	width: 525px;
+	margin-right: 10px;
+}
+
+#player-b-score.scoreboard {
+	background: var(--playerBScore);
+	color: black;
+	width: 525px;
+	margin-left: 10px;
+}
+
+/* Multiplayer garden styles */
+#multiplayer-gardens {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#multiplayer-gardens .garden {
+	margin-top: 10px;
+}
+
+#player-a-garden.garden {
+	margin-right: 10px;
+}
+
+#player-b-garden.garden {
+	margin-left: 10px;
+}
+
+/* Multiplayer timer container styles */
+#multiplayerGameModePage .timer-container {
+	max-width: 570px;
+}
+
+.time-elapsed.time-elapsedB {
+	display: none;
+}
+
+#timer-player-B {
+	display: none;
+}
+
+/* Multiplayer play/pause styles */
+.play-pause-button.play-pause-buttonB {
+	display: none;
+}

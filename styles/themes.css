@@ -1,0 +1,293 @@
+/* ------------------------------------------------------------------------------------------------------ */
+/* Styles for themes
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* Spring theme (default) */
+:root {
+	/* General default colors */
+	--backgroundColor-1: #b3e6b3;
+	--backgroundColor-2: #99d699;
+	--backgroundColor-3: #c2e0c2;
+	--mainContainerColor: rgba(255, 255, 255, 0.6);
+	--h1Color: rgb(66, 58, 40);
+	--h2Color: rgb(66, 58, 40);
+	--h3Color: black;
+	--textShadowColor: rgb(159, 140, 96);
+	--paragraphColor: black;
+	--anchorColor: #e9b582;
+	--borderColor: white;
+	--accentColor: rgb(66, 58, 40);
+	--buttonBackgroundColor: #cea174;
+	--buttonBackgroundHover: linear-gradient(45deg, saddlebrown, #cea174);
+	--buttonBackgroundActive: linear-gradient(45deg, saddlebrown, white);
+	--footerBackgroundColor: rgba(237, 237, 237, 0.4);
+	--inputBackgroundColor: #f3f6d7;
+	--inputFocusBackgroundColor: white;
+	/* Nav colors */
+	--menuAnchorColor: black;
+	--menuAnchorBackgroundColor: rgb(155, 196, 155);
+	--menuAnchorBackgroundHover: lightpink;
+	--menuAnchorBackgroundActive: white;
+	--menuAnchorSelectedPageColor: #edf19a;
+	/* Theme selection colors */
+	--summerThemeToggleColor: #fcffb0;
+	--autumnThemeToggleColor: #977f71;
+	--springThemeToggleColor: #fadbd7;
+	--winterThemeToggleColor: #b4c0c0;
+	/* Homepage colors */
+	--titlePlantOutlineColor: rgb(66, 58, 40);
+	--registerBannerColor: rgba(66, 58, 40, .7);
+	/* Register page colors*/
+	--mainContainerRegisterColor: rgba(237, 241, 154, 0.6);
+	/* Stats page colors*/
+	--tableBackgroundColor: #f2f2f2;
+	--tableBorderColor: white;
+	--tableOddRowsBackgroundColor: white;
+	/* About us page colors */
+	--aboutUsParagraphColor: black;
+	/* Game pages colors */
+	--gameGridBackgroundColor: white;
+	--gameCellBackgroundColor: white;
+	--scoreboardBackgroundColor: rgb(66, 58, 40);
+	--timeElapsedContainerBackgroundColor: lightpink;
+	--flowerpopup:	lightgreen; 
+	/* Cells icons */
+	--cellA: url("../media/plants/spring/daisy.png");
+	--cellB: url("../media/plants/spring/blue-bouquet.png");
+	--cellC: url("../media/plants/spring/rainbow-flower.png");
+	--cellD: url("../media/plants/spring/purple-lotus.png");
+	--cellE: url("../media/plants/spring/pink-lotus.png");
+	--cellF: url("../media/plants/spring/rose.png");
+	--cellG: url("../media/plants/spring/sunflower.png");
+	--cellH: url("../media/plants/spring/laceleaf.png");
+	/* Multiplayer page colors */
+	--gameGridABackground: lightyellow;
+	--gameGridBBackground: lightblue;
+	--playerAScore: lightyellow;
+	--playerBScore: lightblue;
+}
+
+/* Darkmode theme */
+:root.darkmode {
+	/* Darkmode general colors */
+	--backgroundColor-1: #2a322a;
+	--backgroundColor-2: #242c24;
+	--backgroundColor-3: #273327;
+	--mainContainerColor: rgba(54, 54, 54, 0.7);
+	--h1Color: #BE9DDE;
+	--h2Color: #BE9DDE;
+	--h3Color: #BE9DDE;
+	--textShadowColor: #8653b9;
+	--paragraphColor: white;
+	--anchorColor: #BE9DDE;
+	--borderColor: black;
+	--accentColor: white;
+	--buttonBackgroundColor: rgb(176, 176, 176);
+	--buttonBackgroundHover: linear-gradient(45deg, gray, darkgray);
+	--buttonBackgroundActive: linear-gradient(45deg, white, gray);
+	--footerBackgroundColor: rgba(54, 54, 54, 0.7);
+	--inputBackgroundColor: #BE9DDE;
+	--inputFocusBackgroundColor: rgb(176, 176, 176);
+	/* Darmode nav colors */
+	--menuAnchorColor: #BE9DDE;
+	--menuAnchorBackgroundColor: rgb(13, 19, 13);
+	--menuAnchorBackgroundHover: rgba(0, 71, 71);
+	--menuAnchorBackgroundActive: black;
+	--menuAnchorSelectedPageColor: #3d007a;
+	/* Darkmode theme selection colors */
+	--summerThemeToggleColor: rgb(184, 182, 100);
+	--autumnThemeToggleColor: #7f5f4d;
+	--springThemeToggleColor: #5f795c;
+	--winterThemeToggleColor: #527272;
+	/* Homepage colors */
+	--titlePlantOutlineColor: #BE9DDE;
+	--registerBannerColor: rgba(0, 71, 71, 0.7);
+	/* Darkmode register page colors */
+	--mainContainerRegisterColor: rgba(0, 71, 71, 0.6);
+	/* Darkmode stats page colors */
+	--tableBackgroundColor: rgb(154, 154, 154);
+	--tableBorderColor: darkgray;
+	--tableOddRowsBackgroundColor: darkgray;
+	/* Darkmode about us page colors */
+	--aboutUsParagraphColor: #BE9DDE;
+	/* Darkmode game pages colors */
+	--gameGridBackgroundColor: rgb(68, 63, 63);
+	--gameCellBackgroundColor: rgb(84, 76, 76);
+	--scoreboardBackgroundColor: rgb(0, 71, 71);
+	--timeElapsedContainerBackgroundColor: #BE9DDE;
+	--flowerpopup: #595959;
+	/* Darkmode cells icons */
+	--cellA: url("../media/plants/darkmode/angry-mushroom.png");
+	--cellB: url("../media/plants/darkmode/moon-mushroom.png");
+	--cellC: url("../media/plants/darkmode/red-mushroom.png");
+	--cellD: url("../media/plants/darkmode/psychedelic-mushroom.png");
+	--cellE: url("../media/plants/darkmode/truffle-mushroom.png");
+	--cellF: url("../media/plants/darkmode/purple-mushroom.png");
+	--cellG: url("../media/plants/darkmode/super-happy-mushroom.png");
+	--cellH: url("../media/plants/darkmode/star-mushroom.png");
+	/* Darkmode multiplayer page colors */
+	--gameGridABackground: rgb(153, 156, 116);
+	--gameGridBBackground: rgb(50, 73, 90);
+	--playerAScore: rgb(153, 156, 116);
+	--playerBScore: rgb(97, 143, 177);
+}
+
+/* Winter theme */
+:root.winter {
+	/* Winter general colors */
+	--backgroundColor-1: #ade2ea;
+	--backgroundColor-2: #8acbd3;
+	--backgroundColor-3: #9bd5e2;
+	--mainContainerColor: rgba(202, 219, 222, 0.7);
+	--h1Color: white;
+	--h2Color: white;
+	--textShadowColor: rgb(0, 64, 85);
+	--paragraphColor: #001825;
+	--anchorColor: lightblue;
+	--accentColor: rgb(0, 115, 255);
+	--buttonBackgroundColor: rgb(186, 227, 227);
+	--buttonBackgroundHover: linear-gradient(45deg, #4b7f97, rgb(220, 255, 255));
+	--buttonBackgroundActive: linear-gradient(45deg, #4b7f97, white);
+	--inputBackgroundColor: #eff1f1;
+	/* Winter nav colors */
+	--menuAnchorBackgroundColor: rgb(202, 219, 222);
+	--menuAnchorBackgroundHover: rgb(155, 191, 195);
+	--menuAnchorBackgroundActive: #4b7f97;
+	--menuAnchorSelectedPageColor: white;
+	/* Winter homepage colors */
+	--titlePlantOutlineColor: white;
+	/* Winter stats page colors */
+	--tableBackgroundColor: rgb(224, 247, 255);
+	--tableBorderColor: rgb(210, 223, 226);
+	--tableOddRowsBackgroundColor: rgb(210, 223, 226);
+	/* Winter game pages colors */
+	--gameCellBackgroundColor: lightblue;
+	--scoreboardBackgroundColor: #47778d;
+	--timeElapsedContainerBackgroundColor: rgb(232, 227, 194);
+	--flowerpopup: rgb(232, 227, 194);
+	/* Winter cells icons */
+	--cellA: url("../media/plants/winter/pine-tree.png");
+	--cellB: url("../media/plants/winter/candle.png");
+	--cellC: url("../media/plants/winter/christmas-wreath.png");
+	--cellD: url("../media/plants/winter/snow-covered-tree.png");
+	--cellE: url("../media/plants/winter/snowflake-plant.png");
+	--cellF: url("../media/plants/winter/mistletoe.png");
+	--cellG: url("../media/plants/winter/pine-cone.png");
+	--cellH: url("../media/plants/winter/christmas-tree.png");
+	/* Winter multiplayer page colors */
+	--gameGridBBackground: rgb(215, 255, 215);
+	--playerBScore: rgb(215, 255, 215);
+}
+
+/* Autumn theme */
+:root.autumn {
+	/* Autumn general colors */
+	--backgroundColor-1: #D1B7A1;
+	--backgroundColor-2: #E9D3C0;
+	--backgroundColor-3: #d0b59e;
+	--mainContainerColor: rgba(237, 177, 150, 0.7);
+	--h1Color: #5C3700;
+	--h2Color: #5C3700;
+	--textShadowColor: #d79e72;
+	--buttonBackgroundColor: #ce8852;
+	--buttonBackgroundHover: linear-gradient(45deg, #a5825c, #ce8852);
+	--buttonBackgroundActive: linear-gradient(45deg, #a5825c, white);
+	--inputBackgroundColor: rgb(247, 239, 231);
+	/* Autumn nav colors */
+	--menuAnchorBackgroundColor: rgb(165, 130, 92);
+	--menuAnchorBackgroundHover: #d0b59e;
+	--menuAnchorBackgroundActive: rgb(225, 150, 75);
+	--menuAnchorSelectedPageColor: rgb(233, 108, 89);
+	/* Autumn stats page colors */
+	--tableBackgroundColor: rgb(255, 199, 190);
+	--tableBorderColor: rgb(227, 172, 163);
+	--tableOddRowsBackgroundColor: rgb(227, 172, 163);
+	/* Autumn game pages colors */
+	--gameCellBackgroundColor: rgb(225, 150, 75);
+	--timeElapsedContainerBackgroundColor: rgb(225, 150, 75);
+	--flowerpopup: burlywood;
+	/* Autumn cells icons */
+	--cellA: url("../media/plants/autumn/wheat.png");
+	--cellB: url("../media/plants/autumn/hawthorn.png");
+	--cellC: url("../media/plants/autumn/pumpkin.png");
+	--cellD: url("../media/plants/autumn/acorn.png");
+	--cellE: url("../media/plants/autumn/leaf.png");
+	--cellF: url("../media/plants/autumn/carrot.png");
+	--cellG: url("../media/plants/autumn/chestnut.png");
+	--cellH: url("../media/plants/autumn/begonia.png");
+}
+
+/* Summer theme */
+:root.summer {
+	/* Summer general colors */
+	--backgroundColor-1: #f3f197;
+	--backgroundColor-2: #eddd84;
+	--backgroundColor-3: #f5f296;
+	--mainContainerColor: rgba(220, 255, 208, 0.7);
+	--h1Color: rgb(0, 113, 151);
+	--h2Color: rgb(0, 113, 151);
+	--textShadowColor: rgb(71, 186, 224);
+	--anchorColor: #f3f197;
+	--buttonBackgroundColor: rgb(163, 223, 143);
+	--buttonBackgroundHover: linear-gradient(45deg, rgb(58, 180, 117), rgb(163, 223, 143));
+	--buttonBackgroundActive: linear-gradient(45deg, rgb(58, 180, 117), white);
+	--inputBackgroundColor: #fffbe7;
+	/* Summer nav colors */
+	--menuAnchorBackgroundColor: rgb(28, 173, 222);
+	--menuAnchorSelectedPageColor: rgb(163, 223, 143);
+	/* Summer stats page colors */
+	--tableBackgroundColor: rgb(216, 224, 148);
+	--tableBorderColor: rgb(233, 238, 183);
+	--tableOddRowsBackgroundColor: rgb(233, 238, 183);
+	/* Summer game pages colors */
+	--gameCellBackgroundColor: floralwhite;
+	--timeElapsedContainerBackgroundColor: rgb(163, 223, 143);
+	--flowerpopup: khaki;
+	/* Summer cells icons */
+	--cellA: url("../media/plants/summer/palm-tree.png");
+	--cellB: url("../media/plants/summer/watermelon.png");
+	--cellC: url("../media/plants/summer/apple-tree.png");
+	--cellD: url("../media/plants/summer/cactus.png");
+	--cellE: url("../media/plants/summer/gerbera.png");
+	--cellF: url("../media/plants/summer/coconut-drink.png");
+	--cellG: url("../media/plants/summer/pineapple.png");
+	--cellH: url("../media/plants/summer/aloe-vera.png");
+}
+
+/* Easter egg theme */
+:root.easterEgg {
+	/* Easter egg general colors */
+	--backgroundColor-1: none;
+	--backgroundColor-2: none;
+	--backgroundColor-3: none;
+	--mainContainerColor: rgba(65, 203, 245, 0.15);
+	--h1Color: lightblue;
+	--h2Color: lightblue;
+	--textShadowColor: rgb(0, 95, 60);
+	--anchorColor: gold;
+	--buttonBackgroundColor: gold;
+	--buttonBackgroundHover: linear-gradient(45deg, cyan, lightpink, lavender, gold);
+	--buttonBackgroundActive: linear-gradient(45deg, cyan, purple);
+	--inputBackgroundColor: #fffbe7;
+	/* Easter egg nav colors */
+	--menuAnchorBackgroundColor: rgb(113, 113, 226, 0.3);
+	--menuAnchorSelectedPageColor: gold;
+	/* Easter egg stats page colors */
+	--tableBackgroundColor: rgb(226, 209, 238);
+	--tableBorderColor: lavender;
+	--tableOddRowsBackgroundColor: lavender;
+	/* Easter egg game pages colors */
+	--gameCellBackgroundColor: transparent;
+	--scoreboardBackgroundColor: rgb(51, 155, 51);
+	--timeElapsedContainerBackgroundColor: violet;
+	--flowerpopup: lavender;
+	/* Easter egg cells icons */
+	--cellA: url("../media/plants/spring/laceleaf.png");
+	--cellB: url("../media/plants/summer/aloe-vera.png");
+	--cellC: url("../media/plants/autumn/begonia.png");
+	--cellD: url("../media/plants/winter/christmas-tree.png");
+	--cellE: url("../media/plants/darkmode/star-mushroom.png");
+	--cellF: url("../media/plants/easterEgg/cloud-plant.png");
+	--cellG: url("../media/plants/easterEgg/clover.png");
+	--cellH: url("../media/plants/easterEgg/earth-flower.png");
+}

@@ -1,0 +1,577 @@
+/* ------------------------------------------------------------------------------------------------------ */
+/* Styles for the navigation
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* General navigation styles */
+
+nav {
+	width: fit-content;
+	max-width: 235px;
+	height: 50px;
+	margin: 0px;
+	z-index: 1;
+}
+
+nav iframe#soundcloud-iframe {
+	width: 100%;
+	height: 235px;
+	border: none;
+	border-bottom: 3px solid #f50;
+}
+
+#homepage nav,
+#homeStatsPage nav,
+#homeInstructionsPage nav,
+#registerPage nav {
+	width: 100%;
+	max-width: none;
+}
+
+header h2 {
+	font-size: 30px;
+	width: fit-content;
+	margin: auto;
+	margin-top: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+header h2:hover {
+	animation: bounce 1s ease-in;
+}
+
+header #back-to-login {
+	height: 0;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+#registerPage #theme-choice-button img,
+#homeStatsPage #theme-choice-button img,
+#homeInstructionsPage #theme-choice-button img {
+	position: absolute;
+	left: -10px;
+}
+
+#back-to-login a {
+	width: 40px;
+	height: 40px;
+	font-family: menlo, monospace;
+	color: black;
+	text-decoration: none;
+	position: absolute;
+	top: 6px;
+	z-index: 5;
+}
+
+nav#back-to-login a+p,
+#homepage nav a+p,
+nav#back-to-login #theme-choice-button p,
+#homepage #theme-choice-button p {
+	display: none;
+}
+
+nav#back-to-login a:hover+p,
+#homepage nav a:hover+p,
+nav#back-to-login #theme-choice-button:hover p,
+#homepage nav #theme-choice-button:hover p {
+	display: inline;
+	position: absolute;
+	text-align: center;
+	left: 5px;
+	top: 50px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--borderColor);
+	width: fit-content;
+	z-index: 5;
+}
+
+#homepage nav #homepage-instructions-link+p {
+	left: unset;
+	right: 5px;
+}
+
+#homepage-stats-link,
+#homepage-instructions-link {
+	position: absolute;
+	top: 4px;
+}
+
+#homepage-stats-link {
+	left: 7px;
+}
+
+#homepage-instructions-link {
+	right: 10px;
+}
+
+#homepage-stats-link img,
+#homepage-instructions-link img {
+	width: 42px;
+	padding: 0px;
+}
+
+#back-to-login a:hover,
+#homepage-stats-link:hover,
+#homepage-instructions-link:hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+#back-to-login a:active,
+#homepage-stats-link:active,
+#homepage-instructions-link:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor))
+	 drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	 drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	 drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	 drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	 drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+#theme-choice-button img,
+#back-to-login img {
+	width: 37px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* Themes selection nav styles */
+
+#theme-choice-button {
+	position: absolute;
+	left: 60px;
+	top: 6px;
+}
+
+#theme-choice-button img:hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+#theme-choice-button img:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+nav#back-to-login #theme-choice-button:hover p {
+	left: -15px;
+	top: 45px;
+}
+
+#homepage nav #theme-choice-button:hover p {
+	top: 45px;
+	left: -3px;
+}
+
+#collapse-themes:checked~div {
+	position: absolute;
+	display: block;
+	/* Show dropdown themes menu when the checkbox is checked */
+}
+
+.theme-selection-container {
+	display: none;
+	background: var(--mainContainerColor);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 5;
+	position: fixed;
+	top: 50px;
+	left: 5px;
+	width: 325px;
+}
+
+.theme-selection-container p {
+	font-family: menlo, monospace;
+	margin: 20px;
+}
+
+.theme-boxes {
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+}
+
+#three-first-theme-boxes,
+#two-last-theme-boxes {
+	display: flex;
+	flex-direction: row;
+}
+
+.theme-boxes span {
+	font-family: shake, monospace;
+	color: black;
+	display: inline-block;
+	font-size: 10px;
+	padding-top: 5px;
+}
+
+.theme-boxes div:last-of-type span {
+	color: white;
+}
+
+.theme-choice {
+	width: 90px;
+	height: 90px;
+	border-radius: 7px;
+	border: 3px solid var(--borderColor);
+	box-shadow: 1px 1px 5px rgb(74, 77, 67);
+	margin: 5px;
+}
+
+.theme-choice:hover {
+	cursor: pointer;
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	box-shadow: 0 0 7px rgb(52, 36, 36);
+}
+
+.theme-choice:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+.theme-choice.winter-theme {
+	background-image: url(../media/plants/winter/snowflake-plant.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--winterThemeToggleColor)
+}
+
+.theme-choice.spring-theme {
+	background-image: url(../media/plants/spring/blue-bouquet.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--springThemeToggleColor);
+}
+
+.theme-choice.summer-theme {
+	background-image: url(../media/plants/summer/pineapple.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--summerThemeToggleColor);
+}
+
+.theme-choice.autumn-theme {
+	background-image: url(../media/plants/autumn/leaf.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--autumnThemeToggleColor);
+}
+
+.theme-choice.darkmode-theme {
+	background-image: url(../media/plants/darkmode/red-mushroom.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #21201f;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* Styles for the sidebar menu */
+
+#menu {
+	grid-area: nav;
+	height: 100%;
+	width: fit-content;
+}
+
+#menu-button {
+	display: none;
+	background-color: transparent;
+	left: 5px;
+	top: 6px;
+}
+
+#menu-button img {
+	width: 28px;
+    padding: 5px;
+    background-color: var(--menuAnchorBackgroundColor);
+    backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu-button img:hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+#menu-button img:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+nav.sidebar-menu {
+	position: fixed;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	top: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	height: 100%;
+	background-color: var(--menuAnchorBackgroundColor);
+}
+
+nav.sidebar-menu a {
+	display: block;
+	padding: 15px;
+	padding-right: 20px;
+	font-family: menlo, monospace;
+	font-size: 15px;
+	text-decoration: none;
+	color: var(--menuAnchorColor);
+	cursor: pointer;
+}
+
+nav.sidebar-menu img:not(#avatar-nav img, #avatar-nav-player-a img, #avatar-nav-player-b img) {
+	position: absolute;
+	width: 30px;
+	margin-block: -7px;
+}
+
+nav.sidebar-menu span:not(nav #avatar-nav span, #avatar-nav-player-a span, #avatar-nav-player-b span, nav #reset-warning) {
+	margin-left: 35px;
+}
+
+nav.sidebar-menu a:not(#avatar-nav, #avatar-nav-player-a, #avatar-nav-player-b) {
+	padding-left: 7px;
+}
+
+nav.sidebar-menu a:hover {
+	background-color: var(--menuAnchorBackgroundHover);
+}
+
+nav.sidebar-menu a:active {
+	background-color: var(--menuAnchorBackgroundActive);
+}
+
+nav.sidebar-menu .selected-page,
+nav.sidebar-menu .selected-page:hover {
+	background-color: var(--menuAnchorSelectedPageColor);
+	cursor: auto;
+}
+
+.avatar-slideshow {
+	display: none;
+}
+
+#avatar-next-button {
+	background-color: var(--menuAnchorSelectedPageColor);
+	color: var(--menuAnchorColor);
+	position: absolute;
+    right: 0;
+    top: 150px;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-radius: 100px;
+}
+
+#avatar-previous-button {
+	background-color: var(--menuAnchorSelectedPageColor);
+	color: var(--menuAnchorColor);
+	position: absolute;
+    top: 150px;
+	border: none;
+	cursor: pointer;
+	margin-left: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-radius: 100px;
+}
+
+#avatar-previous-button:hover, #avatar-next-button:hover {
+	background-color: var(--menuAnchorBackgroundHover);
+}
+
+#avatar-previous-button:active, #avatar-next-button:active {
+	background-color: var(--menuAnchorBackgroundActive);
+}
+
+#avatar-nav, #avatar-nav-player-a, #avatar-nav-player-b {
+	text-decoration: none;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	border: 2px solid var(--borderColor);
+}
+
+#avatar-nav:not(#avatar-nav.selected-page),
+#avatar-nav-player-a:not(#avatar-nav-player-a.selected-page),
+#avatar-nav-player-b:not(#avatar-nav-player-b.selected-page) {
+	background-color: var(--mainContainerColor);
+}
+
+#avatar-nav img, #avatar-nav-player-a img, #avatar-nav-player-b img {
+	padding-left: 4px;
+	width: 110px;
+}
+
+#avatar-nav span, #avatar-nav-player-a span, #avatar-nav-player-b span {
+	top: 0;
+    position: absolute;
+    overflow: auto;
+    max-height: 50px;
+    text-overflow: ellipsis;
+    max-width: 60px;
+    margin-left: 10px;
+    margin-top: 65px;
+}
+
+#avatar-nav:hover, #avatar-nav-player-a:hover, #avatar-nav-player-b:hover {
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+#avatar-nav:hover span, #avatar-nav-player-a:hover span, #avatar-nav-player-b:hover span {
+	margin-top: 43px;
+}
+
+#avatar-nav:active, #avatar-nav-player-a:active, #avatar-nav-player-b:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+nav.sidebar-menu .theme-choice {
+	background-size: 30px;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+	background-position: center;
+	height: 50px;
+}
+
+nav.sidebar-menu p {
+	font-family: menlo, monospace;
+	font-size: 15px;
+	position: relative;
+	background-color: var(--menuAnchorSelectedPageColor);
+	top: 0px;
+	padding: 5px;
+	padding-left: 10px;
+	border-top: 2px solid var(--borderColor);
+	border-bottom: 2px solid var(--borderColor);
+}
+
+nav.sidebar-menu #nav-theme-selection {
+	display: flex;
+}
+
+#nav-grid-size-selection {
+	display: flex;
+}
+
+.grid-choice {
+	background-size: 30px;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+	background-position: center;
+	height: 50px;
+	width: 70px;
+}
+
+.grid-choice:hover {
+	cursor: pointer;
+	animation-name: scale-up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	box-shadow: 0 0 7px rgb(52, 36, 36);
+}
+
+.grid-choice:active {
+	filter: drop-shadow(-0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px -0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(-0.5px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0px 0.5px 0.5px var(--titlePlantOutlineColor)) 
+	drop-shadow(0.5px 0.5px 0.5px var(--titlePlantOutlineColor));
+}
+
+.grid-choice.small-grid {
+    background-image: url(../media/icons/6x6-grid-icon.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightgreen;
+}
+
+.grid-choice.normal-grid {
+    background-image: url(../media/icons/8x8-grid-icon.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: lightblue;
+}
+
+.grid-choice.large-grid {
+    background-image: url(../media/icons/10x10-grid-icon.png);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: lightsalmon;
+}
+
+#reset-warning {
+	font-size: 8.5px;
+}
+
+.hide-grid-size-selection {
+	display: none;
+}
+
+/* The hidden checkbox enables the dropdown menu when the sidebar cannot be shown */
+nav input[type="checkbox"] {
+	display: none;
+}

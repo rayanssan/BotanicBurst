@@ -1,0 +1,374 @@
+/* ------------------------------------------------------------------------------------------------------ */
+/* Media queries for displays with width less than 1190px
+/* ------------------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1419px) {
+
+  /* Multiplayer game page styles */
+  #multiplayerGameModePage #multiplayer-grids {
+    flex-direction: column;
+  }
+
+  #player-a-garden {
+    max-width: 230px;
+    margin-right: 5px;
+  }
+
+  #player-b-garden {
+    max-width: 230px;
+    margin-left: 5px;
+  }
+
+  #player-a-score {
+    max-width: 230px;
+    margin-right: 5px;
+  }
+
+  #player-b-score {
+    max-width: 230px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  main.container {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* About us page styles */
+  #aboutUsPage div.big-div {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #aboutUsPage div.big-div p {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0 5% 0 5%;
+  }
+
+  #aboutUsPage div.big-div img {
+    margin: 0 auto 20px auto;
+    width: 120px;
+  }
+
+  #aboutUsPage .right img {
+    order: -1;
+  }
+
+  /* Instructions pages styles */
+  #instructions-grids-1st-pair,
+  #instructions-grids-2nd-pair {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Stats pages table styles */
+  main#stats-container,
+  #homeStatsPage main#stats-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #stats-container table,
+  #stats-container thead,
+  #stats-container tbody,
+  #stats-container th,
+  #stats-container td,
+  #stats-container tr, 
+  #popupTable table,
+  #popupTable thead,
+  #popupTable tbody,
+  #popupTable th,
+  #popupTable td,
+  #popupTable tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #stats-container tbody, #popupTable tbody {
+    width: 90vw;
+    max-width: 500px;
+  }
+
+  #stats-container tr, #popupTable tr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #stats-container thead tr, #popupTable tr:first-child {
+    display: none;
+  }
+
+  #stats-container tr, #popupTable tr {
+    border-radius: 10px;
+  }
+
+  /* Labeling the table elements in the stats pages */
+  #stats-container td:nth-of-type(2):before, #popupTable td:nth-of-type(2):before {
+    padding-right: 10px;
+  }
+
+  #stats-container td:nth-of-type(3):before, #popupTable td:nth-of-type(3):before{
+    content: "Games Played:";
+    color: rgb(12, 86, 12);
+    padding-right: 10px;
+  }
+
+  #stats-container td:nth-of-type(4):before, #popupTable td:nth-of-type(4):before {
+    content: "Time Played:";
+    color: rgb(12, 86, 12);
+    padding-right: 10px;
+  }
+
+  #stats-container td:nth-of-type(5):before, #popupTable td:nth-of-type(5):before {
+    content: "Best Score:";
+    color: rgb(12, 86, 12);
+    padding-right: 10px;
+  }
+
+  #stats-container td:nth-of-type(6):before, #popupTable td:nth-of-type(6):before {
+    content: "Best Time:";
+    color: rgb(12, 86, 12);
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  body:not(#homepage, #registerPage, #homeStatsPage, #homeInstructionsPage) {
+    display: flex;
+    flex-direction: column
+  }
+
+  /* Nav styles */
+  #menu {
+    position: absolute;
+    max-height: 550px;
+    top: 50px;
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+
+  nav.sidebar-menu a {
+    display: none;
+  }
+
+  #avatar-nav span {
+    top: -20px;
+  }
+
+  #avatar-nav:hover span,
+  #avatar-nav-player-a:hover span,
+  #avatar-nav-player-b:hover span {
+    top: 2px;
+  }
+
+  nav.sidebar-menu {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1;
+  }
+
+  #menu-button {
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #menu #collapse:not(:checked)~#soundcloud-iframe,
+  #menu #collapse:not(:checked)~#avatar-nav,
+  #menu #collapse:not(:checked)~#avatar-nav-player-a,
+  #menu #collapse:not(:checked)~#avatar-nav-player-b,
+  #menu #collapse:not(:checked)~#slideshow-container,
+  #menu #collapse:not(:checked)~#nav-grid-size-selection-container,
+  #menu #collapse:not(:checked)~#nav-theme-selection,
+  #menu #collapse:not(:checked)~p {
+    display: none;
+  }
+
+  #collapse:checked~a:not(#menu-button) {
+    position: relative;
+    display: block;
+    /* Show dropdown menu when the checkbox is checked */
+  }
+
+  #homeStatsPage header h2:not(nav h2),
+  #registerPage header h2:not(nav h2),
+  #homeInstructionsPage header h2:not(nav h2) {
+    visibility: hidden;
+  }
+
+  /* Game tyles */
+  #lower-game-container-elements {
+    flex-direction: column;
+  }
+
+  #ai-mode-button {
+    margin-top: 10px;
+  }
+
+  #lower-game-container-elements button {
+    min-width: 200px;
+    width: 69vw;
+    max-width: 365px;
+  }
+
+  .time-elapsed-container {
+    height: 23px;
+  }
+
+  .time-elapsed-container,
+  .time-elapsed-container span {
+    font-size: clamp(12px, 2.5vw, 18px);
+  }
+
+  /* Profile page styles */
+  main#profile-container {
+    margin-top: auto;
+  }
+
+  #multiplayerProfilesPage main#profile-container {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  #profile-A-container, #profile-B-container {
+    width: unset;
+  }
+
+  /* Game over styles */
+  main .garden-popup {
+    max-width: 500px;
+    width: 80vw;
+    margin-top: -30vw;
+  }
+
+  #multiplayer-scores .scoreboard {
+    flex-direction: column;
+    font-size: 10px;
+    align-items: unset;
+  }
+
+  #multiplayer-scores .scoreboard .score {
+    font-size: inherit;
+  }
+
+  #multiplayer-scores .scoreboard span {
+    margin-bottom: 10px;
+  }
+
+  #multiplayer-scores .scoreboard span:first-child {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+
+  /* Nav styles */
+  .theme-selection-container {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  #three-first-theme-boxes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Instructions styles */
+  #instructions-grids {
+    flex-direction: column;
+  }
+
+  #instructions-grids-1st-pair,
+  #instructions-grids-2nd-pair {
+    display: block;
+  }
+
+  .youtube-video {
+    width: 85%;
+    height: 85%;
+    margin-top: 10px;
+  }
+
+  #points img {
+    width: 90%;
+  }
+
+  main#instructions-container div.small-div {
+    display: inline;
+  }
+
+  main#instructions-container div.small-div img {
+    width: 90px;
+    height: 90px;
+    margin-top: 15px;
+  }
+
+  main#instructions-container div.big-div {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  /* Nav styles */
+  header h2 {
+    position: relative;
+    left: 10px
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body:not(#multiplayerGameModePage) {
+    width: fit-content;
+  }
+
+  main.container,
+  main,
+  main.game,
+  #precisionGameModePage main.game,
+  #timedGameModePage main.game,
+  #multiplayerGameModePage main.game,
+  main.container#register-container,
+  main#stats-container,
+  #homeStatsPage main#stats-container {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  #multiplayerProfilesPage main#profile-container {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .game-container {
+    padding: 0;
+  }
+
+  main .garden-popup {
+    margin-top: 0px;
+  }
+
+  .game-grid .cell {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  /* Nav styles */
+  header h2:not(nav h2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .game-grid .cell {
+    max-width: 26px;
+    max-height: 26px;
+  }
+}
