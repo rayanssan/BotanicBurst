@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./styles/stylesheet.css'>
+    <link rel="stylesheet" href="./styles/gamestyle.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
+    <title>Botanic Burst | Precision Mode</title>
+    <link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+    <script src="./scripts/GameClass.js"></script>
+</head>
+
+<!-- Body of the game website -->
+
+<body id="precisionGameModePage">
+
+    <header>
+        <h2>Botanic Burst!</h2>
+    </header>
+
+    <!--Game-->
+    <main class="game">
+
+        <div class="game-container">
+            <div id="upper-game-container-elements">
+                <div class="time-elapsed-container">
+                    <!--Time Elapsed-->
+                    <span>Time Elapsed:</span>
+                    <span class="time-elapsed">00:00:00</span>
+                </div>
+                <div class="play-pause-button"><img id="play-pause-icon" src="./media/icons/play.png" alt="A play button"></div>
+            </div>
+
+            <!--Game Grid-->
+            <div id="gameGrid" class="game-grid"></div>
+
+            <div class="precisionConveyor">
+                <p>Your garden needs:</p>
+            </div>
+
+            <!--Garden-->
+            <!--Matched plants are inserted
+                into this element, in order to 
+                form a "garden"-->
+            <div class="garden">
+                <p>Garden (<span class="garden-len">0</span>):</p>
+            </div>
+
+            <!--Score-->
+            <div class="scoreboard">
+                <span>Score: <span class="score">0</span></span>
+                <span>Plants Left: <span class="plants-left">-</span></span>
+            </div>
+
+            <div id="lower-game-container-elements">
+                <!--Reset game button-->
+                <div id="reset-button">
+                    <button class="button">Reset Game</button>
+                </div>
+                <!--AI move button-->
+                <div id="ai-mode-button">
+                    <button class="button">AI Move</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &#127800;
+            Developed by Rayan S. Santana, Helena Duarte, and Marta Maia
+            &#127800;
+            <br>
+            2023
+        </p>
+    </footer>
+
+    <script src="./scripts/themesScripts.js"></script>
+    <script src="./scripts/precisionGameScripts.js"></script>
+    <script src="./scripts/generalInfoUpdates.js"></script>
+    <script src="./scripts/gameStats.js"></script>
+
+</body>
+
+</html>

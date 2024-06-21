@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='./styles/stylesheet.css'>
+  <link rel='stylesheet' href='./styles/mediaqueries.css'>
+  <title>Botanic Burst | Register</title>
+  <link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+</head>
+
+<body id="registerPage">
+
+  <header>
+    <h2>Botanic Burst!</h2>
+    <nav id="back-to-login">
+      <div id="theme-choice-button"><label for="collapse-themes"><img src="./media/icons/seasons.png"
+            alt="A seasons icon"></label>
+        <p>themes</p>
+      </div>
+      <input type="checkbox" id="collapse-themes">
+      <div class="theme-selection-container">
+        <h2>themes</h2>
+        <p>prefer another aesthetic? we have 5 beautiful themes just for you!</p>
+        <div class="theme-boxes">
+          <div id="three-first-theme-boxes">
+            <div class="theme-choice spring-theme"><span>Spring</span></div>
+            <div class="theme-choice summer-theme"><span>Summer</span></div>
+            <div class="theme-choice autumn-theme"><span>Autumn</span></div>
+          </div>
+          <div id="two-last-theme-boxes">
+            <div class="theme-choice winter-theme"><span>Winter</span></div>
+            <div class="theme-choice darkmode-theme"><span>Dark Mode</span></div>
+          </div>
+        </div>
+      </div>
+      <a href='homepage.html'><img src="./media/icons/back.png" alt="A go back button"></a>
+      <p>back to login</p>
+    </nav>
+  </header>
+
+  <main id="register-container" class="container">
+
+    <section>
+      <h2>welcome</h2>
+      <p>we hope you love playing this game as much as we loved creating it &#128515;</p>
+    </section>
+
+    <form action='homepage.html' method="post">
+
+      <div class="form-group">
+        <input id='username' type='text' placeholder=" " required>
+        <label for="username">username</label>
+      </div>
+      <div class="form-group">
+        <input id="email" type="email" placeholder=" " required>
+        <label for="email">e-mail</label>
+      </div>
+      <div class="form-group">
+        <input id="password" type="password" placeholder=" " required>
+        <label for="password">password</label>
+      </div>
+      <div class="form-group">
+        <input id="age" type="number" placeholder=" " min="13" max="120" required>
+        <label for="age">age</label>
+      </div>
+      <div class="form-group">
+        <input id="gender" type="text" placeholder=" " required>
+        <label for="gender">gender</label>
+      </div>
+
+      <div class="avatar-input">
+        <p>choose an avatar</p>
+        <img class="icon-choice" src="media/avatars/fox.png" alt="fox icon">
+        <img class="icon-choice" src="media/avatars/shark.png" alt="shark icon">
+        <img class="icon-choice" src="media/avatars/giraffe.png" alt="giraffe icon">
+        <img class="icon-choice" src="media/avatars/owl.png" alt="owl icon">
+        <img class="icon-choice" src="media/avatars/rhinoceros.png" alt="rhinoceros icon">
+        <img class="icon-choice" src="media/avatars/tiger.png" alt="tiger icon">
+      </div>
+
+      <button id="register-play-game-button" class="button">Create Account!</button>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>
+      &#127800;
+      Developed by Rayan S. Santana, Helena Duarte, and Marta Maia
+      &#127800;
+      <br>
+      2023
+    </p>
+  </footer>
+
+  <script src="./scripts/themesScripts.js"></script>
+  <script src="./scripts/userRegistration.js"></script>
+
+</body>
+
+</html>

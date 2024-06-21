@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./styles/stylesheet.css'>
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
+    <link rel="stylesheet" href="./styles/gamestyle.css">
+    <title>Botanic Burst | Multiplayer AI Mode</title>
+    <link rel="icon" href="./media/plants/spring/blue-bouquet.png">
+    <script src="./scripts/GameClass.js"></script>
+</head>
+
+<body id="multiplayerGameModePage">
+
+    <header>
+        <h2>Botanic Burst!</h2>
+    </header>
+
+    <!--Game-->
+    <main class="game">
+
+        <!--Time elapsed and timer-->
+        <div id="multiplayer-times">
+            <div id="upper-game-container-elements">
+                <div class="time-elapsed-container">
+                    <!--Time Elapsed-->
+                    <span>Time Elapsed:</span>
+                    <span class="time-elapsed time-elapsedA">00:00:00</span>
+                    <span class="time-elapsed time-elapsedB">00:00:00</span>
+                </div>
+                <div class="play-pause-button play-pause-buttonA"><img id="play-pause-icon-A" src="./media/icons/play.png" alt="A play button"></div>
+                <div class="play-pause-button play-pause-buttonB multiplayerAI-play-pause-button"><img id="play-pause-icon-B" src="./media/icons/play.png" alt="A play button"></div>
+            </div>
+            <div class="timer-container">
+                <img src="media/icons/timer.png" alt="The timer flower">
+                <progress id="timer-player-A" value="0" max="30"></progress>
+                <progress id="timer-player-B" value="0" max="30"></progress>
+            </div>
+        </div>
+
+        <!--Game Grids-->
+        <div id="multiplayer-grids">
+            <!--Game Grid A-->
+            <div class="game-container">
+                <div id="gameGridA" class="game-grid"></div>
+            </div>
+            <!--Game Grid B-->
+            <div class="game-container">
+                <div id="gameGridB" class="game-grid"></div>
+            </div>
+        </div>
+
+        <!--Gardens-->
+        <div id="multiplayer-gardens">
+            <div id="player-a-garden" class="garden gardenA">
+                <p>Garden (<span class="garden-len garden-lenA">0</span>):</p>
+            </div>
+            <div id="player-b-garden" class="garden gardenB">
+                <p>Garden (<span class="garden-len garden-lenB">0</span>):</p>
+            </div>
+        </div>
+
+        <!--Scores-->
+        <div id="multiplayer-scores">
+            <div id="player-a-score" class="scoreboard">
+                <span>Player A Score: <span class="score scoreA">0</span></span>
+                <span>Plants Left: <span class="plants-left plants-leftA">-</span></span>
+            </div>
+            <div id="player-b-score" class="scoreboard">
+                <span>AI Score: <span class="score scoreB">0</span></span>
+                <span>Plants Left: <span class="plants-left plants-leftB">-</span></span>
+            </div>
+        </div>
+
+        <!--Reset game button-->
+        <div id="reset-button">
+            <button class="button">Reset Game</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &#127800;
+            Developed by Rayan S. Santana, Helena Duarte, and Marta Maia
+            &#127800;
+            <br>
+            2023
+        </p>
+    </footer>
+
+    <script src="./scripts/themesScripts.js"></script>
+    <script src="./scripts/multiplayerAIGameScripts.js"></script>
+    <script src="./scripts/generalInfoUpdates.js"></script>
+    <script src="./scripts/gameStats.js"></script>
+
+</body>
+
+</html>
